@@ -32,7 +32,7 @@ const toolsList = [
   },
   {
     name: 'Calendly',
-    image: '/logos/calendly.png',
+    image: '/assets/logos/calendly.png',
   },
   {
     name: 'Buffer',
