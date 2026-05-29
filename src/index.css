@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #000D1A;
+    --bg-secondary: #F5F0EB;
+    --bg-alt: #001524;
+    --text-primary: #F5F0EB;
+    --text-secondary: #8B9DAF;
+    --text-dark: #1A1A1A;
+    --accent: #E63946;
+    --accent-hover: #FF4D6A;
+    --border-subtle: rgba(245, 240, 235, 0.08);
+    --border-light: rgba(26, 26, 26, 0.12);
+    --background: 210 100% 5%;
+    --foreground: 30 20% 95%;
+    --card: 210 100% 5%;
+    --card-foreground: 30 20% 95%;
+    --popover: 210 100% 5%;
+    --popover-foreground: 30 20% 95%;
+    --primary: 355 78% 56%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 30 20% 95%;
+    --secondary-foreground: 210 100% 5%;
+    --muted: 210 40% 15%;
+    --muted-foreground: 210 20% 60%;
+    --accent-color: 355 78% 56%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 40% 15%;
+    --input: 210 40% 15%;
+    --ring: 355 78% 56%;
+    --radius: 0.75rem;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  * {
+    @apply border-border;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-mono-label {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .section-padding {
+    padding: 120px clamp(24px, 5vw, 80px);
+  }
+
+  .section-padding-mobile {
+    padding: 80px clamp(24px, 5vw, 80px);
+  }
+
+  .max-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+html {
+  scroll-behavior: auto;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
