@@ -2,7 +2,6 @@ import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { RGBELoader } from 'three/addons/loaders/RGBELoader.js';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -92,7 +91,7 @@ export default function HeroSection() {
     }
     envSphere.geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
     envScene.add(envSphere);
-    const envRT = pmremGenerator.fromScene(envScene as unknown as THREE.RoomEnvironment);
+    const envRT = pmremGenerator.fromScene(envScene as THREE.Scene);
     scene.environment = envRT.texture;
     pmremGenerator.dispose();
 

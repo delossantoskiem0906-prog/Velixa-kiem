@@ -54,9 +54,11 @@ const toolsList = [
     name: 'Kimi AI',
     image: '/assets/logos/kimi-ai.png',
   },
-];
+] as const;
 
-function ToolCard({ tool, index, isInView }) {
+type Tool = typeof toolsList[number];
+
+function ToolCard({ tool, index, isInView }: { tool: Tool; index: number; isInView: boolean }) {
   return (
     <motion.div
       className="flex-shrink-0 w-48 h-48 flex flex-col items-center justify-center p-6 rounded-xl transition-all duration-300 cursor-pointer hover:-translate-y-2"
