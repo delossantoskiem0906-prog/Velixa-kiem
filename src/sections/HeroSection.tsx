@@ -380,7 +380,7 @@ export default function HeroSection() {
           alt="Velixa Virtual Assistance"
           className="absolute z-[2] transition-opacity duration-300"
           style={{
-            top: '1000px',
+            top: '75px',
             left: '25px',
             width: '400px',
             opacity: 0.9,
