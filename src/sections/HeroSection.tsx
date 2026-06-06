@@ -410,7 +410,7 @@ export default function HeroSection() {
             Your Reliable Partner Behind the Scenes
           </h1>
           <p
-            className="text-sm leading-[1.65] mb-6"
+            className="text-base leading-[1.65] mb-6"
             style={{
               color: 'var(--text-secondary)',
               maxWidth: '420px',
