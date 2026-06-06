@@ -380,7 +380,7 @@ export default function HeroSection() {
           alt="Velixa Virtual Assistance"
           className="absolute z-[2] transition-opacity duration-300"
           style={{
-            top: '40x',
+            top: '70x',
             left: '25px',
             width: '400px',
             opacity: 0.9,
@@ -410,7 +410,7 @@ export default function HeroSection() {
             Your Reliable Partner Behind the Scenes
           </h1>
           <p
-            className="text-base leading-[1.65] mb-6"
+            className="text-sm leading-[1.65] mb-6"
             style={{
               color: 'var(--text-secondary)',
               maxWidth: '420px',
